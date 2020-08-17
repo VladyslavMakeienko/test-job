@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     "& > * + *": {
       marginLeft: theme.spacing(2),
+      marginRight: theme.spacing(3),
     },
   },
 }));

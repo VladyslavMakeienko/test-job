@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     "& > * + *": {
       marginLeft: theme.spacing(2),
     },
+  },
     title: {
       display: "flex",
       flexDirection: "row",
@@ -19,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
       textAlign: "center",
       flexGrow: 1,
     },
-  },
+  
 }));
 
 const MainInfo = () => {

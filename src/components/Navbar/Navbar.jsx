@@ -10,31 +10,64 @@ import GeneralPlan from "../GeneralPlan/GeneralPlan";
 import Houses from "../Houses/Houses";
 import Location from "../Location/Location";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  title: {
-    display: "flex",
-    flexGrow: 1,
-    color: "grey",
+// const useStyles = makeStyles(() => ({
+//   root: {
+//     flexGrow: 1,
+//   },
+//   title: {
+//
+//     flexGrow: 1,
+//     color: "grey",
+//
+//
+//
+//
+//
+//   },
+//   styleBackground: {
+//     backgroundColor: "#ffffff",
+
+//     width: "100%",
+//   },
+// }));
+
+const useStyles = makeStyles(() => ({
+  styleAppBar: {
+    backgroundColor: "#fff",
     flexDirection: "row",
-    margin: "0, 100px, 0, 100px",
     alignItems: "flex-start",
-    justifyContent: "space-around",
-    textTransform: "uppercase",
+    justifyContent: "center",
+    margin: "0, 100px, 0, 100px",
   },
-  styleBackground: {
-    backgroundColor: "#ffffff",
+  textStyle: {
+    color: "grey",
+    textTransform: "uppercase",
   },
 }));
 
 const Navbar = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar className={classes.styleBackground}>
+    <AppBar position="fixed">
+      <Toolbar className={classes.styleAppBar}>
+        <Typography className={classes.textStyle}>
+          <About />
+          <Projects />
+          <Gallery />
+          <Houses />
+          <GeneralPlan />
+          <Location />
+        </Typography>
+      </Toolbar>
+    </AppBar>
+  );
+};
+
+export default Navbar;
+
+{
+  /* <AppBar position="static" >
+        <Toolbar className={classes.styleBackground} >
           <Typography variant="h6" className={classes.title}>
             <About />
             <Projects />
@@ -44,9 +77,5 @@ const Navbar = () => {
             <Location />
           </Typography>
         </Toolbar>
-      </AppBar>
-    </div>
-  );
-};
-
-export default Navbar;
+      </AppBar> */
+}
