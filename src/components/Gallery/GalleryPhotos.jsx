@@ -81,7 +81,12 @@ export default function AdvancedGridList() {
 
   return (
     <div className={classes.root}>
-      <GridList cellHeight={200} spacing={1} className={classes.gridList} cols={2}>
+      <GridList
+        cellHeight={200}
+        spacing={1}
+        className={classes.gridList}
+        cols={2}
+      >
         {tileData.map((tile) => (
           <GridListTile
             key={tile.img}

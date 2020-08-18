@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import { Grid } from "@material-ui/core";
 import Link from "@material-ui/core/Link";
-import { Paper } from '@material-ui/core';
+import { Paper } from "@material-ui/core";
 
 const useStyles = makeStyles({
   componentStyle: {
@@ -31,6 +31,7 @@ const useStyles = makeStyles({
     float: "center",
     height: "300px",
     margin: "200px",
+    alignItems: "center",
   },
   textStyle: {
     justifyContent: "center",
