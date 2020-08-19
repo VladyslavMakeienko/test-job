@@ -13,7 +13,7 @@ function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary">
       {"© "}
-      <Link color="inherit" href="https://material-ui.com/">
+      <Link color="inherit" href="#">
         wolshino
       </Link>{" "}
       {new Date().getFullYear()}
@@ -34,8 +34,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3, 2),
     flexBasis: '100%',
     marginTop: "auto",
-    alignItems: 'flex-start',
-    justifyContent: 'space-around',
+    // alignItems: 'flex-start',
+    justifyContent: 'space-between',
     backgroundColor:
       theme.palette.type === "light"
         ? theme.palette.grey[200]
@@ -48,7 +48,7 @@ export default function StickyFooter() {
 
   return (
     <div className={classes.root}>
-      <CssBaseline />
+      {/* <CssBaseline /> */}
 
       <footer className={classes.footer}>
         <Container>

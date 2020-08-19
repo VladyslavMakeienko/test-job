@@ -33,15 +33,17 @@ import Location from "../Location/Location";
 
 const useStyles = makeStyles(() => ({
   styleAppBar: {
+    display: "flex",
     backgroundColor: "#fff",
     flexDirection: "row",
-    alignItems: "flex-start",
     justifyContent: "center",
     margin: "0, 100px, 0, 100px",
   },
   textStyle: {
     color: "grey",
     textTransform: "uppercase",
+    display: "flex",
+    margin: "10px",
   },
 }));
 

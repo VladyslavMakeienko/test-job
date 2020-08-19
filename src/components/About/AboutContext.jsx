@@ -10,8 +10,16 @@ const useStyles = makeStyles({
   componentStyle: {
     backgroundImage:
       "url(https://log-house.ru/wp-content/uploads/2019/09/Dom-359_1-7.jpg)",
-    height: "500px",
-    margin: "100px",
+    // width: '100%',
+    // position: 'absolute',
+    // zIndex: 1,
+    // left: 0,
+    // backgroundSize: "100% 100%",
+    // flexBasis: '100%',
+    flexGrow: 1,
+    width: '100%',
+    marginTop: "100px",
+    display: 'flex'
   },
   newsText: {
     textTransform: "uppercase",

@@ -11,6 +11,7 @@ import { gallerySecond } from "../images/gallerySecond.jpg";
 import { galleryThird } from "../images/galleryThird.jpg";
 import Box from "@material-ui/core/Box";
 import axios from "axios";
+import CardActionArea from "@material-ui/core/CardActionArea";
 
 const useStyles = makeStyles({
   bullet: {
@@ -57,54 +58,58 @@ const useStyles = makeStyles({
 function HousesCard(props) {
   const classes = useStyles();
   const { title, imgSrc } = props;
-  const [housesData,  setHousesData] = useState({});
-  useEffect(() => {
-    axios
-    .get(`https://newsapi.org/v2/top-headlines?q=houses&apiKey=1055503713d0487c9ac246e93b6a132a`)
-    .then(function (response) {
-      const { data } = response;
-      const { results } = data;
-      const newHousesData = {};
-      results.forEach((publishedAt, urlToImage, title, url) => {
-        newHousesData[publishedAt, urlToImage, title, url] = {
-          date: publishedAt,
-          image: urlToImage,
-          title,
-          url
-        }
-      });
-      setHousesData(newHousesData);
-    });
-  }, []);
-  const { date, image, title, url } = housesData[props];
+  // const [housesData, setHousesData] = useState({});
+  // useEffect(() => {
+  //   axios
+  //     .get(
+  //       `https://newsapi.org/v2/top-headlines?q=houses&apiKey=1055503713d0487c9ac246e93b6a132a`
+  //     )
+  //     .then(function (response) {
+  //       const { data } = response;
+  //       const { results } = data;
+  //       const newHousesData = {};
+  //       results.forEach((publishedAt, urlToImage, title, url) => {
+  //         newHousesData[(publishedAt, urlToImage, title, url)] = {
+  //           date: publishedAt,
+  //           image: urlToImage,
+  //           title,
+  //           url,
+  //         };
+  //       });
+  //       setHousesData(newHousesData);
+  //     });
+  // }, []);
+  // const { date, image, title, url } = housesData[props];
   return (
     <Card>
-      <CardContent className={classes.root}>
-        <CardMedia
-          image={imgSrc}
-          style={{ height: "150px" }}
-          className={classes.imgStyle}
-        >
-          {" "}
-          <Typography color="textSecondary" gutterBottom>
-            <Box component="div" className={classes.dateStyle}>
-              <Box component="span" className={classes.titleDate}>
-                {" "}
-                {new Date().getDate()}{" "}
+      <CardActionArea>
+        <CardContent className={classes.root}>
+          <CardMedia
+            image={imgSrc}
+            style={{ height: "150px" }}
+            className={classes.imgStyle}
+          >
+            {" "}
+            <Typography color="textSecondary" gutterBottom>
+              <Box component="div" className={classes.dateStyle}>
+                <Box component="span" className={classes.titleDate}>
+                  {" "}
+                  {new Date().getDate()}{" "}
+                </Box>
+                <Box component="span" className={classes.titleMonth}>
+                  {new Date().toLocaleString("en", { month: "long" })}{" "}
+                </Box>
+                <Box component="span" className={classes.titleYear}>
+                  {new Date().getFullYear()}
+                </Box>
               </Box>
-              <Box component="span" className={classes.titleMonth}>
-                {new Date().toLocaleString("en", { month: "long" })}{" "}
-              </Box>
-              <Box component="span" className={classes.titleYear}>
-                {new Date().getFullYear()}
-              </Box>
-            </Box>
+            </Typography>
+          </CardMedia>
+          <Typography variant="body2" component="p">
+            {title}
           </Typography>
-        </CardMedia>
-        <Typography variant="body2" component="p">
-          {title}
-        </Typography>
-      </CardContent>
+        </CardContent>
+      </CardActionArea>
     </Card>
   );
 }

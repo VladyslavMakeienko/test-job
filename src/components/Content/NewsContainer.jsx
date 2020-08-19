@@ -8,6 +8,7 @@ import { Paper } from "@material-ui/core";
 const useStyles = makeStyles({
   componentStyle: {
     backgroundColor: "silver",
+
     height: "500px",
     margin: "100px",
   },

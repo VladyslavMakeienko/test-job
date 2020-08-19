@@ -10,10 +10,20 @@ import Content from "./components/Content/Content";
 import AboutContext from "./components/About/AboutContext";
 import { Route, Switch } from "react-router-dom";
 import NewHeader from "./components/Header/NewHeader";
+import NewMainInfo from "./components/MainInfo/NewMainInfo";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  allStyle: {
+    display: "flex",
+    flexDirection: "column",
+  },
+});
 
 function App() {
+  const classes = useStyles();
   return (
-    <Grid container direction="row">
+    <Grid container className={classes.allStyle}>
       <Grid item>
         <Header />
       </Grid>
@@ -34,6 +44,7 @@ function App() {
             
             
           </Switch> */}
+          <NewMainInfo />
           <AboutContext />
           <Content />
           <GalleryPhotos />
