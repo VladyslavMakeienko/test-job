@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
+import Box from "@material-ui/core/Box";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
@@ -26,20 +27,23 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     minHeight: "100vh",
+    justifyContent: "space-between",
   },
-  main: {
-    marginLeft:  theme.spacing(8), 
-  },
+
   footer: {
     padding: theme.spacing(3, 2),
-    flexBasis: '100%',
+    flexGrow: 1,
     marginTop: "auto",
     // alignItems: 'flex-start',
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
     backgroundColor:
       theme.palette.type === "light"
         ? theme.palette.grey[200]
         : theme.palette.grey[800],
+  },
+  containerStyle: {
+    justifyContent: "space-around",
+    display: "flex",
   },
 }));
 
@@ -48,24 +52,26 @@ export default function StickyFooter() {
 
   return (
     <div className={classes.root}>
-      {/* <CssBaseline /> */}
+      <CssBaseline />
 
       <footer className={classes.footer}>
-        <Container>
-          <Typography variant="body1">
-            Share with your friends
-            <IconButton>
-              <InstagramIcon />
-            </IconButton>
-            <IconButton>
-              <TwitterIcon />
-            </IconButton>
-            <IconButton>
-              <FacebookIcon />
-            </IconButton>
-            <Copyright />
-          </Typography>
-          
+        <Container className={classes.containerStyle}>
+          <Box component="div">
+            <Typography variant="body1">
+              Share with your friends
+              <IconButton>
+                <InstagramIcon />
+              </IconButton>
+              <IconButton>
+                <TwitterIcon />
+              </IconButton>
+              <IconButton>
+                <FacebookIcon />
+              </IconButton>
+            </Typography>
+          </Box>
+
+          <Copyright />
         </Container>
       </footer>
     </div>

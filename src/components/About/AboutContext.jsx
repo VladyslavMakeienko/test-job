@@ -10,41 +10,39 @@ const useStyles = makeStyles({
   componentStyle: {
     backgroundImage:
       "url(https://log-house.ru/wp-content/uploads/2019/09/Dom-359_1-7.jpg)",
-    // width: '100%',
-    // position: 'absolute',
-    // zIndex: 1,
-    // left: 0,
-    // backgroundSize: "100% 100%",
-    // flexBasis: '100%',
     flexGrow: 1,
-    width: '100%',
-    marginTop: "100px",
-    display: 'flex'
+    // marginTop: "100px",
+    display: "flex",
+    backgroundRepeat: "no-repeat",
   },
   newsText: {
     textTransform: "uppercase",
     paddingTop: "10%",
     justifyContent: "center",
     color: "#fff",
+    display: "flex",
   },
   positionText: {
     justifyContent: "center",
     display: "flex",
+    flexDirection: "column",
   },
   borderStyle: {
     border: "10px solid white",
-    padding: "10px 20px",
-    width: "50%",
+    padding: "3%",
+    width: "70%",
     display: "flex",
-    float: "center",
     height: "300px",
-    margin: "200px",
+    margin: "70px",
     alignItems: "center",
+    flexDirection: "column",
   },
   textStyle: {
     justifyContent: "center",
     padding: "10px",
     color: "#fff",
+    display: "flex",
+    flexDirection: "column",
   },
   linkStyle: {
     color: "#fff",
@@ -52,9 +50,13 @@ const useStyles = makeStyles({
   linkText: {
     border: "1px solid white",
     borderRadius: "80px",
-    width: "120px",
+    width: "140px",
     textTransform: "uppercase",
-    padding: "10px",
+    padding: "7px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    margin: "0  35% 0 35%",
   },
 });
 

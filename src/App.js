@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import StickyFooter from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Container from "@material-ui/core/Container";
-import GalleryPhotos from "./components/Gallery/GalleryPhotos";
+import NewGalleryPhotos from "./components/Gallery/NewGalleryPhotos";
 import { Grid } from "@material-ui/core";
 import Content from "./components/Content/Content";
 import AboutContext from "./components/About/AboutContext";
@@ -27,10 +27,8 @@ function App() {
       <Grid item>
         <Header />
       </Grid>
-      <Grid item container>
-        <Grid item xs={false} sm={2} />
-        <Grid item xs={12} sm={8}>
-          {/* <Switch>
+      <Grid item>
+        {/* <Switch>
             <Route
               exact
               path="/about"
@@ -44,12 +42,10 @@ function App() {
             
             
           </Switch> */}
-          <NewMainInfo />
-          <AboutContext />
-          <Content />
-          <GalleryPhotos />
-        </Grid>
-        <Grid item xs={false} sm={2} />
+        <NewMainInfo />
+        <AboutContext />
+        <Content />
+        <NewGalleryPhotos />
       </Grid>
       <StickyFooter />
     </Grid>

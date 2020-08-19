@@ -8,23 +8,25 @@ import { Grid, Paper } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   numberStyle: {
     color: "green",
-    padding: "10px",
-    display: "fixed",
+    padding: "70px",
+    display: "flex",
   },
   paperStyle: {
-    position: "absolute",
-    left: 0,
-    width: "100%",
-    zIndex: 2,
     height: "200px",
     justifyContent: "center",
     display: "flex",
     alignItems: "center",
+    // flexBasis: '100%',
+    flexGrow: 1,
+    // flexWrap: 'wrap'
   },
   logoText: {
     color: "grey",
+    display: "flex",
+    padding: "70px",
   },
   questionStyle: {
+    display: "flex",
     border: "1px solid green",
     padding: "10px",
     borderRadius: "100px",
@@ -32,11 +34,19 @@ const useStyles = makeStyles((theme) => ({
     color: "green",
     boxSizing: "content-box",
     width: "150px",
+    margin: "30%",
+    justifyContent: "center",
   },
   questionTextStyle: {
     justifyContent: "center",
     display: "flex",
     alignItems: "center",
+  },
+  someStyle: {
+    display: "flex",
+    flexGrow: 1,
+    // alignItems: "center",
+    justifyContent: "center",
   },
 }));
 
@@ -45,7 +55,7 @@ const NewMainInfo = () => {
   const preventDefault = (event) => event.preventDefault();
   return (
     <Grid container>
-      <Grid item xs={4}>
+      <Grid item className={classes.someStyle}>
         <Paper className={classes.paperStyle}>
           <Grid item xs={4}>
             <Box component="div" className={classes.numberStyle}>
