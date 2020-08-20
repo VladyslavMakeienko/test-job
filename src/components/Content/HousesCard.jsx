@@ -12,7 +12,7 @@ import { galleryThird } from "../images/galleryThird.jpg";
 import Box from "@material-ui/core/Box";
 import axios from "axios";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import { getNewsIds, getNews } from "../../services/NewsAPI";
+import { loadNewsFetch } from "../../services/NewsAPI";
 
 const useStyles = makeStyles({
   bullet: {
@@ -59,12 +59,15 @@ const useStyles = makeStyles({
 function HousesCard(props) {
   const classes = useStyles();
   const { title, imgSrc } = props;
-  const [newsIds, setNewsIds] = useState([]);
   useEffect(() => {
-    // 
-    getNewsIds().then((data) => setNewsIds(data));
-  }, []);
-  // const [housesData, setHousesData] = useState({});
+    loadNewsFetch();
+  }, [])
+  // const [newsIds, setNewsIds] = useState([]);
+  // useEffect(() => {
+  //   // 
+  //   getNewsIds().then((data) => setNewsIds(data));
+  // }, []);
+  // // const [housesData, setHousesData] = useState({});
   // useEffect(() => {
   //   axios
   //     .get(
@@ -113,7 +116,7 @@ function HousesCard(props) {
           </CardMedia>
           <Typography variant="body2" component="p">
             {title}
-            {console.log(newsIds)}
+            {/* {console.log(newsIds)} */}
           </Typography>
         </CardContent>
       </CardActionArea>
