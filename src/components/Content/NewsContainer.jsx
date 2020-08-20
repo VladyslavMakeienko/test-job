@@ -4,13 +4,12 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import { Grid } from "@material-ui/core";
 import { Paper } from "@material-ui/core";
+import HousesCard from "./HousesCard";
 
 const useStyles = makeStyles({
   componentStyle: {
-    backgroundColor: "silver",
-
-    height: "500px",
-    margin: "100px",
+    display: "flex",
+    flexGrow: 1,
   },
   newsText: {
     textTransform: "uppercase",
@@ -35,8 +34,6 @@ const useStyles = makeStyles({
 const NewsContainer = () => {
   const classes = useStyles();
   return (
-    <Grid container>
-      <Grid item xs={12}>
         <Paper className={classes.componentStyle}>
           <Box component="span" className={classes.positionText}>
             <Typography className={classes.newsText} variant="h3">
@@ -53,9 +50,8 @@ const NewsContainer = () => {
               />
             </Typography>
           </Box>
+          
         </Paper>
-      </Grid>
-    </Grid>
   );
 };
 

@@ -12,6 +12,7 @@ import { Route, Switch } from "react-router-dom";
 import NewHeader from "./components/Header/NewHeader";
 import NewMainInfo from "./components/MainInfo/NewMainInfo";
 import { makeStyles } from "@material-ui/core/styles";
+import SwiperPhotos from './components/Slider/SwiperPhotos';
 
 const useStyles = makeStyles({
   allStyle: {
@@ -42,6 +43,7 @@ function App() {
             
             
           </Switch> */}
+          <SwiperPhotos />
         <NewMainInfo />
         <AboutContext />
         <Content />

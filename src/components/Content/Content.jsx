@@ -3,12 +3,66 @@ import HousesCard from "./HousesCard";
 import { Grid } from "@material-ui/core";
 import { galleryFirst } from "../images/galleryFirst.jpg";
 import NewsContainer from "./NewsContainer";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
+import { Paper } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  componentStyle: {
+    display: "flex",
+    flexGrow: 1,
+    height: "400px",
+    alignItems: "center",
+    flexDirection: "column",
+    backgroundColor: 'silver'
+  },
+  newsText: {
+    textTransform: "uppercase",
+    paddingTop: "10%",
+  },
+  positionText: {
+    alignItems: "center",
+    display: "flex",
+    flexDirection: "column",
+  },
+  imgStyleFirst: {
+    height: "20px",
+    width: "200px",
+    marginRight: "40px",
+  },
+  imgStyleSecond: {
+    height: "20px",
+    width: "200px",
+    marginLeft: "40px",
+  },
+  cardStyle: {
+    display: "flex",
+    flexDirection: 'row',
+  },
+});
 
 const Content = () => {
+  const classes = useStyles();
   return (
     <Grid container spacing={5}>
-      <NewsContainer />
-      <Grid item xs={12} sm={4}>
+      <Paper className={classes.componentStyle}>
+        <Box component="span" className={classes.positionText}>
+          <Typography className={classes.newsText} variant="h3">
+            <Box
+              component="img"
+              src="https://img.icons8.com/ios/452/wavy-line.png"
+              className={classes.imgStyleFirst}
+            />
+            News
+            <Box
+              component="img"
+              src="https://img.icons8.com/ios/452/wavy-line.png"
+              className={classes.imgStyleSecond}
+            />
+          </Typography>
+        </Box>
+        <Grid item xs={12} sm={4}>
           <HousesCard
             title={` Where the Russians were resting in the summer of 
           ${new Date().getFullYear()}`}
@@ -34,7 +88,8 @@ const Content = () => {
               "https://www.dl-chem.com/sites/default/files/styles/infoblok555x360/public/IMG-20150626-WA0008_0.jpg?itok=Pvn2LqNu"
             }
           />
-      </Grid>
+        </Grid>
+      </Paper>
     </Grid>
   );
 };

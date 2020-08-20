@@ -3,23 +3,27 @@ import { makeStyles } from "@material-ui/core/styles";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import Box from "@material-ui/core/Box";
+import { GridListTileBar } from "@material-ui/core";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
+    flexGrow: 1,
     justifyContent: "space-around",
     overflow: "hidden",
     backgroundColor: theme.palette.background.paper,
   },
   gridList: {
-    width: 500,
+    width: 700,
     height: 450,
+    display: "flex",
+    flexGrow: 1,
   },
   dateStyle: {
-    display: "block",
-    flexDirection: "column",
-    backgroundColor: "#fff",
+    display: "flex",
+    flexDirection: "row",
     width: "25%",
     marginLeft: "10%",
     justifyContent: "center",
@@ -28,15 +32,20 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 25,
     padding: "15px",
     justifyContent: "center",
+    display: "flex",
   },
   titleMonth: {
     textTransform: "uppercase",
-    padding: "3px",
-    justifyContent: "center",
+    padding: "1px",
+    // justifyContent: "center",
+    display: "flex",
+    flexDirection: "column",
   },
   titleYear: {
-    padding: "15px",
-    justifyContent: "center",
+    padding: "1px",
+    // justifyContent: "center",
+    display: "flex",
+    flexDirection: "column",
   },
 }));
 
@@ -65,26 +74,27 @@ const tileData = [
 
 export default function ImageGridList() {
   const classes = useStyles();
+  
 
   return (
     <div className={classes.root}>
-      <GridList cellHeight={160} className={classes.gridList} cols={3}>
-        <Box component="div" className={classes.dateStyle}>
-          <Box component="span" className={classes.titleDate}>
-            {" "}
-            {new Date().getDate()}{" "}
-          </Box>
-          <Box component="span" className={classes.titleMonth}>
-            {new Date().toLocaleString("en", { month: "long" })}{" "}
-          </Box>
-          <Box component="span" className={classes.titleYear}>
-            {new Date().getFullYear()}
-          </Box>
-        </Box>
+      <GridList cellHeight={200} className={classes.gridList} cols={3}>
         {tileData.map((tile) => (
           <GridListTile key={tile.img} cols={tile.cols || 1}>
             <Box component="img" src={tile.img} alt={tile.title}></Box>
             {/* <img ></img> */}
+            <GridListTileBar title={<Box component="div" className={classes.dateStyle}>
+      <Box component="span" className={classes.titleDate}>
+        {" "}
+        {new Date().getDate()}{" "}
+      </Box>
+      <Box component="span" className={classes.titleMonth}>
+        {new Date().toLocaleString("en", { month: "long" })}{" "}
+      </Box>
+      <Box component="span" className={classes.titleYear}>
+        {new Date().getFullYear()}
+      </Box>
+    </Box>}>title</GridListTileBar>
           </GridListTile>
         ))}
       </GridList>
