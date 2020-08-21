@@ -1,23 +1,27 @@
 import React from "react";
+import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import { Grid } from "@material-ui/core";
 import { Paper } from "@material-ui/core";
-import HousesCard from "./HousesCard";
+import NewGalleryPhotos from "./NewGalleryPhotos";
 
 const useStyles = makeStyles({
-  componentStyle: {
+  containerStyle: {
     display: "flex",
+    flexDirection: "row",
     flexGrow: 1,
-  },
-  newsText: {
-    textTransform: "uppercase",
-    paddingTop: "10%",
+    height: "400px",
+    justifyContent: "center",
   },
   positionText: {
-    justifyContent: "center",
+    alignItems: "center",
     display: "flex",
+    flexDirection: "column",
+  },
+  galleryText: {
+    textTransform: "uppercase",
+    paddingBottom: "30px",
   },
   imgStyleFirst: {
     height: "20px",
@@ -29,20 +33,27 @@ const useStyles = makeStyles({
     width: "200px",
     marginLeft: "40px",
   },
+  galleryPosition: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "row",
+    flexGrow: 1,
+  },
 });
 
-const NewsContainer = () => {
+const GalleryContainer = () => {
   const classes = useStyles();
   return (
     <Paper className={classes.componentStyle}>
       <Box component="span" className={classes.positionText}>
-        <Typography className={classes.newsText} variant="h3">
+        <Typography className={classes.galleryText} variant="h3">
           <Box
             component="img"
             src="https://img.icons8.com/ios/452/wavy-line.png"
             className={classes.imgStyleFirst}
           />
-          News
+          Gallery
           <Box
             component="img"
             src="https://img.icons8.com/ios/452/wavy-line.png"
@@ -50,8 +61,13 @@ const NewsContainer = () => {
           />
         </Typography>
       </Box>
+      <Grid container spacing={3} className={classes.galleryPosition}>
+        <Grid item xs={12} sm={6}>
+          <NewGalleryPhotos />
+        </Grid>
+      </Grid>
     </Paper>
   );
 };
 
-export default NewsContainer;
+export default GalleryContainer;

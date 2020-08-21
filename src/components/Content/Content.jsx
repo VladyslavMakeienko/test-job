@@ -15,11 +15,12 @@ const useStyles = makeStyles({
     height: "400px",
     alignItems: "center",
     flexDirection: "column",
-    backgroundColor: 'silver'
+    backgroundColor: "#e9e9e9",
   },
   newsText: {
     textTransform: "uppercase",
     paddingTop: "10%",
+    paddingBottom: "30px",
   },
   positionText: {
     alignItems: "center",
@@ -38,30 +39,30 @@ const useStyles = makeStyles({
   },
   cardStyle: {
     display: "flex",
-    flexDirection: 'row',
+    flexDirection: "row",
   },
 });
 
 const Content = () => {
   const classes = useStyles();
   return (
-    <Grid container spacing={5}>
-      <Paper className={classes.componentStyle}>
-        <Box component="span" className={classes.positionText}>
-          <Typography className={classes.newsText} variant="h3">
-            <Box
-              component="img"
-              src="https://img.icons8.com/ios/452/wavy-line.png"
-              className={classes.imgStyleFirst}
-            />
-            News
-            <Box
-              component="img"
-              src="https://img.icons8.com/ios/452/wavy-line.png"
-              className={classes.imgStyleSecond}
-            />
-          </Typography>
-        </Box>
+    <Paper className={classes.componentStyle}>
+      <Box component="span" className={classes.positionText}>
+        <Typography className={classes.newsText} variant="h3">
+          <Box
+            component="img"
+            src="https://img.icons8.com/ios/452/wavy-line.png"
+            className={classes.imgStyleFirst}
+          />
+          News
+          <Box
+            component="img"
+            src="https://img.icons8.com/ios/452/wavy-line.png"
+            className={classes.imgStyleSecond}
+          />
+        </Typography>
+      </Box>
+      <Grid container spacing={5}>
         <Grid item xs={12} sm={4}>
           <HousesCard
             title={` Where the Russians were resting in the summer of 
@@ -89,8 +90,8 @@ const Content = () => {
             }
           />
         </Grid>
-      </Paper>
-    </Grid>
+      </Grid>
+    </Paper>
   );
 };
 

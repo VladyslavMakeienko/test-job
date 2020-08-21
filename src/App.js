@@ -12,7 +12,9 @@ import { Route, Switch } from "react-router-dom";
 import NewHeader from "./components/Header/NewHeader";
 import NewMainInfo from "./components/MainInfo/NewMainInfo";
 import { makeStyles } from "@material-ui/core/styles";
-import SwiperPhotos from './components/Slider/SwiperPhotos';
+import SwiperPhotos from "./components/Slider/SwiperPhotos";
+import HousesTypesContainer from "./components/Houses/HousesTypesContainer";
+import GalleryContainer from "./components/Gallery/GalleryContainer";
 
 const useStyles = makeStyles({
   allStyle: {
@@ -43,11 +45,13 @@ function App() {
             
             
           </Switch> */}
-          <SwiperPhotos />
         <NewMainInfo />
+        <SwiperPhotos />
+        <HousesTypesContainer />
         <AboutContext />
         <Content />
-        <NewGalleryPhotos />
+        {/* <NewGalleryPhotos /> */}
+        <GalleryContainer />
       </Grid>
       <StickyFooter />
     </Grid>

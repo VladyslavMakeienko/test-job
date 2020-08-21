@@ -5,7 +5,6 @@ import GridListTile from "@material-ui/core/GridListTile";
 import Box from "@material-ui/core/Box";
 import { GridListTileBar } from "@material-ui/core";
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -72,10 +71,8 @@ const tileData = [
   },
 ];
 
-export default function ImageGridList() {
+const NewGalleryPhotos = () => {
   const classes = useStyles();
-  
-
   return (
     <div className={classes.root}>
       <GridList cellHeight={200} className={classes.gridList} cols={3}>
@@ -83,21 +80,27 @@ export default function ImageGridList() {
           <GridListTile key={tile.img} cols={tile.cols || 1}>
             <Box component="img" src={tile.img} alt={tile.title}></Box>
             {/* <img ></img> */}
-            <GridListTileBar title={<Box component="div" className={classes.dateStyle}>
-      <Box component="span" className={classes.titleDate}>
-        {" "}
-        {new Date().getDate()}{" "}
-      </Box>
-      <Box component="span" className={classes.titleMonth}>
-        {new Date().toLocaleString("en", { month: "long" })}{" "}
-      </Box>
-      <Box component="span" className={classes.titleYear}>
-        {new Date().getFullYear()}
-      </Box>
-    </Box>}>title</GridListTileBar>
+            <GridListTileBar
+              title={
+                <Box component="div" className={classes.dateStyle}>
+                  <Box component="span" className={classes.titleDate}>
+                    {" "}
+                    {new Date().getDate()}{" "}
+                  </Box>
+                  <Box component="span" className={classes.titleMonth}>
+                    {new Date().toLocaleString("en", { month: "long" })}{" "}
+                  </Box>
+                  <Box component="span" className={classes.titleYear}>
+                    {new Date().getFullYear()}
+                  </Box>
+                </Box>
+              }
+            ></GridListTileBar>
           </GridListTile>
         ))}
       </GridList>
     </div>
   );
-}
+};
+
+export default NewGalleryPhotos;

@@ -61,10 +61,10 @@ function HousesCard(props) {
   const { title, imgSrc } = props;
   useEffect(() => {
     loadNewsFetch();
-  }, [])
+  }, []);
   // const [newsIds, setNewsIds] = useState([]);
   // useEffect(() => {
-  //   // 
+  //   //
   //   getNewsIds().then((data) => setNewsIds(data));
   // }, []);
   // // const [housesData, setHousesData] = useState({});
