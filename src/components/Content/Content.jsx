@@ -46,6 +46,8 @@ const useStyles = makeStyles({
 const Content = () => {
   const classes = useStyles();
   return (
+    <Grid container>
+      <Grid item xs={6} sm={12}>
     <Paper className={classes.componentStyle}>
       <Box component="span" className={classes.positionText}>
         <Typography className={classes.newsText} variant="h3">
@@ -92,6 +94,8 @@ const Content = () => {
         </Grid>
       </Grid>
     </Paper>
+    </Grid>
+    </Grid>
   );
 };
 

@@ -45,51 +45,55 @@ const useStyles = makeStyles({
 const HousesTypesContainer = () => {
   const classes = useStyles();
   return (
-    <Paper className={classes.componentStyle}>
-      <Box component="span" className={classes.positionText}>
-        <Typography className={classes.housesTypesText} variant="h3">
-          <Box
-            component="img"
-            src="https://img.icons8.com/ios/452/wavy-line.png"
-            className={classes.imgStyleFirst}
-          />
-          6 House Types
-          <Box
-            component="img"
-            src="https://img.icons8.com/ios/452/wavy-line.png"
-            className={classes.imgStyleSecond}
-          />
-        </Typography>
-      </Box>
-      <Grid container spacing={3} className={classes.cardPosition}>
-        {/* <Box className={classes.cardPosition}> */}
-        <Grid item xs={12} sm={3}>
-          <HousesTypes
-            title={` Aspen `}
-            imgSrc={"https://svgsilh.com/svg/2037493-9e9e9e.svg"}
-          />
-        </Grid>
-        <Grid item xs={12} sm={3}>
-          <HousesTypes
-            title={` Heaven `}
-            imgSrc={"https://svgsilh.com/svg/34723-9e9e9e.svg"}
-          />
-        </Grid>
-        <Grid item xs={12} sm={3}>
-          <HousesTypes
-            title={` Veil `}
-            imgSrc={"https://svgsilh.com/svg/310748-9e9e9e.svg"}
-          />
-        </Grid>
-        <Grid item xs={12} sm={3}>
-          <HousesTypes
-            title={` Tower `}
-            imgSrc={"https://svgsilh.com/svg/1299093-9e9e9e.svg"}
-          />
-        </Grid>
-        {/* </Box> */}
+    <Grid container>
+      <Grid item xs={6} sm={12}>
+        <Paper className={classes.componentStyle}>
+          <Box component="span" className={classes.positionText}>
+            <Typography className={classes.housesTypesText} variant="h3">
+              <Box
+                component="img"
+                src="https://img.icons8.com/ios/452/wavy-line.png"
+                className={classes.imgStyleFirst}
+              />
+              4 House Types
+              <Box
+                component="img"
+                src="https://img.icons8.com/ios/452/wavy-line.png"
+                className={classes.imgStyleSecond}
+              />
+            </Typography>
+          </Box>
+          <Grid container spacing={3} className={classes.cardPosition}>
+            {/* <Box className={classes.cardPosition}> */}
+            <Grid item xs={12} sm={3}>
+              <HousesTypes
+                title={` Aspen `}
+                imgSrc={"https://svgsilh.com/svg/2037493-9e9e9e.svg"}
+              />
+            </Grid>
+            <Grid item xs={12} sm={3}>
+              <HousesTypes
+                title={` Heaven `}
+                imgSrc={"https://svgsilh.com/svg/34723-9e9e9e.svg"}
+              />
+            </Grid>
+            <Grid item xs={12} sm={3}>
+              <HousesTypes
+                title={` Veil `}
+                imgSrc={"https://svgsilh.com/svg/310748-9e9e9e.svg"}
+              />
+            </Grid>
+            <Grid item xs={12} sm={3}>
+              <HousesTypes
+                title={` Tower `}
+                imgSrc={"https://svgsilh.com/svg/1299093-9e9e9e.svg"}
+              />
+            </Grid>
+            {/* </Box> */}
+          </Grid>
+        </Paper>
       </Grid>
-    </Paper>
+    </Grid>
   );
 };
 

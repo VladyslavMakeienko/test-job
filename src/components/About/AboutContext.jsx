@@ -5,13 +5,12 @@ import Box from "@material-ui/core/Box";
 import { Grid } from "@material-ui/core";
 import Link from "@material-ui/core/Link";
 import { Paper } from "@material-ui/core";
+import imageForSiteThird from "../images/imageForSiteThird.jpg";
 
 const useStyles = makeStyles({
   componentStyle: {
-    backgroundImage:
-      "url(https://log-house.ru/wp-content/uploads/2019/09/Dom-359_1-7.jpg)",
+    backgroundImage: `url(${imageForSiteThird})`,
     flexGrow: 1,
-    // marginTop: "100px",
     display: "flex",
     backgroundRepeat: "no-repeat",
   },

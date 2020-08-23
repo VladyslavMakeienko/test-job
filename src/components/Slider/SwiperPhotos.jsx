@@ -4,38 +4,30 @@ import MobileStepper from "@material-ui/core/MobileStepper";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
-import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
+import ArrowRight from "../images/ArrowRight.jpg";
+import ArrowLeft from "../images/ArrowLeft.jpg";
+import ImageForSlider from "./ImageForSlider";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
   {
-    label: "San Francisco – Oakland Bay Bridge, United States",
-    imgPath:
-      "https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60",
+    imgPath: `https://lh3.googleusercontent.com/proxy/7Ks5TSiNGPcN-GC1qQEh6n8ttwib06-QPWz8UK0J5f6AlVag4qwvEvQB7kl6TrRDPiUpBDVO0fadc35vvuphlZ2oNUXADg96O7hW_DR--jfuJtFt`,
   },
   {
-    label: "Bird",
-    imgPath:
-      "https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60",
+    imgPath: `https://lh3.googleusercontent.com/proxy/2iH-xs09UVCAyarIifbH4SIP8JIUfWc6vDcwbTYpwVg7PBvSTPjOTmtpdQYF1UL48UJs5vxxYs-zj2yqSPFPN4d6uFE7BAG4noWUka9uUwQaGHrDCqiAd_-MAY1NyURnxQ`,
   },
   {
-    label: "Bali, Indonesia",
     imgPath:
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80",
+      "https://www.remontbp.com/wp-content/uploads/2017/12/%D0%B7%D0%B0%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9-%D0%B4%D0%BE%D0%BC-%D0%B8%D0%B7-%D0%B1%D1%80%D1%83%D1%81%D0%B0.jpg",
   },
   {
-    label: "NeONBRAND Digital Marketing, Las Vegas, United States",
-    imgPath:
-      "https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60",
+    imgPath: `https://i.pinimg.com/originals/1d/07/82/1d07823aa36c5d1f08946d27b83cecae.jpg`,
   },
   {
-    label: "Goč, Serbia",
-    imgPath:
-      "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60",
+    imgPath: `https://goldwyn.ru/images/pages/blog/novosti/20jun/chastdom.jpeg`,
   },
 ];
 
@@ -60,6 +52,21 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     justifyContent: "center",
   },
+  arrowStyle: {
+    display: "flex",
+    height: "25px",
+    width: "40px",
+    backgroundColor: "white",
+    justifyContent: "center",
+  },
+  clickBackground: {
+    display: "flex",
+    padding: "8px",
+    background: "#fafafa",
+    alignItems: "center",
+    flexDirection: "row",
+    justifyContent: "center",
+  },
 }));
 
 const SwiperPhotos = () => {
@@ -82,9 +89,6 @@ const SwiperPhotos = () => {
 
   return (
     <div className={classes.root}>
-      <Paper square elevation={0} className={classes.header}>
-        <Typography>{tutorialSteps[activeStep].label}</Typography>
-      </Paper>
       <AutoPlaySwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={activeStep}
@@ -103,33 +107,30 @@ const SwiperPhotos = () => {
           </div>
         ))}
       </AutoPlaySwipeableViews>
+      {/* тут идет нумерация картинок */}
       <MobileStepper
-        steps={maxSteps}
+        className={classes.clickBackground}
         position="static"
-        variant="text"
-        activeStep={activeStep}
         nextButton={
           <Button
             size="small"
             onClick={handleNext}
             disabled={activeStep === maxSteps - 1}
           >
-            Next
             {theme.direction === "rtl" ? (
-              <KeyboardArrowLeft />
+              <img src={ArrowLeft} className={classes.arrowStyle} />
             ) : (
-              <KeyboardArrowRight />
+              <img src={ArrowRight} className={classes.arrowStyle} />
             )}
           </Button>
         }
         backButton={
           <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
             {theme.direction === "rtl" ? (
-              <KeyboardArrowRight />
+              <img src={ArrowRight} className={classes.arrowStyle} />
             ) : (
-              <KeyboardArrowLeft />
+              <img src={ArrowLeft} className={classes.arrowStyle} />
             )}
-            Back
           </Button>
         }
       />

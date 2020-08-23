@@ -5,6 +5,8 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import { Paper } from "@material-ui/core";
 import NewGalleryPhotos from "./NewGalleryPhotos";
+import Fade from "./Fade";
+import GalleryImages from "./GalleryImages";
 
 const useStyles = makeStyles({
   containerStyle: {
@@ -63,7 +65,7 @@ const GalleryContainer = () => {
       </Box>
       <Grid container spacing={3} className={classes.galleryPosition}>
         <Grid item xs={12} sm={6}>
-          <NewGalleryPhotos />
+          <GalleryImages />
         </Grid>
       </Grid>
     </Paper>

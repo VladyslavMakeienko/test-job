@@ -10,10 +10,14 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: 270,
   },
   media: {
-    height: 140,
+    height: 200,
+    display: "flex",
+    maxWidth: 400,
+    overflow: "hidden",
+    width: "100%",
   },
   titleStyle: {
     textTransform: "uppercase",
