@@ -4,7 +4,6 @@ import Header from "./components/Header/Header";
 import StickyFooter from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Container from "@material-ui/core/Container";
-import NewGalleryPhotos from "./components/Gallery/NewGalleryPhotos";
 import { Grid } from "@material-ui/core";
 import Content from "./components/Content/Content";
 import AboutContext from "./components/About/AboutContext";
@@ -50,7 +49,6 @@ function App() {
         <HousesTypesContainer />
         <AboutContext />
         <Content />
-        {/* <NewGalleryPhotos /> */}
         <GalleryContainer />
       </Grid>
       <StickyFooter />

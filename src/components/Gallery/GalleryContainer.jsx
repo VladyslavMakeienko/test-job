@@ -4,7 +4,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import { Paper } from "@material-ui/core";
-import NewGalleryPhotos from "./NewGalleryPhotos";
 import Fade from "./Fade";
 import GalleryImages from "./GalleryImages";
 

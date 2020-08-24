@@ -20,25 +20,11 @@ const useStyles = makeStyles({
     margin: "0 2px",
     transform: "scale(0.8)",
   },
-  titleDate: {
-    fontSize: 25,
-    padding: "15px",
-    justifyContent: "center",
-  },
-  titleMonth: {
-    textTransform: "uppercase",
-    padding: "3px",
-    justifyContent: "center",
-  },
-  titleYear: {
-    padding: "15px",
-    justifyContent: "center",
-  },
   pos: {
     marginBottom: 12,
   },
   dateStyle: {
-    display: "block",
+    display: "flex",
     flexDirection: "column",
     backgroundColor: "#fff",
     width: "25%",
@@ -49,44 +35,20 @@ const useStyles = makeStyles({
     padding: "0",
   },
   imgStyle: {
-    webkitClipPath:
-      "polygon(0 0,100% 0,100% 100%,calc(50% + 10px) 100%,50% calc(100% - 10px),calc(50% - 10px) 100%,0 100%)",
-    clipPath:
-      "polygon(0 0,100% 0,100% 100%,calc(50% + 6px) 100%,50% calc(100% - 6px),calc(50% - 6px) 100%,0 100%)",
+    webkitClipPath: `polygon(0 0,100% 0,100% 100%,calc(50% + 10px) 100%,50% calc(100% - 10px),calc(50% - 10px) 100%,0 100%)`,
+    clipPath: `polygon(0 0,100% 0,100% 100%,calc(50% + 6px) 100%,50% calc(100% - 6px),calc(50% - 6px) 100%,0 100%)`,
   },
 });
 
 function HousesCard(props) {
   const classes = useStyles();
-  const { title, imgSrc } = props;
+  const { title, imgSrc, date } = props;
   const [news, setNews] = useState([]);
 
   useEffect(() => {
-    loadNews().then(loadedNews => setNews(loadedNews));
+    loadNews().then((loadedNews) => setNews(loadedNews));
   }, []);
-  
-  // // const [housesData, setHousesData] = useState({});
-  // useEffect(() => {
-  //   axios
-  //     .get(
-  //       `https://newsapi.org/v2/top-headlines?q=houses&apiKey=1055503713d0487c9ac246e93b6a132a`
-  //     )
-  //     .then(function (response) {
-  //       const { data } = response;
-  //       const { results } = data;
-  //       const newHousesData = {};
-  //       results.forEach((publishedAt, urlToImage, title, url) => {
-  //         newHousesData[(publishedAt, urlToImage, title, url)] = {
-  //           date: publishedAt,
-  //           image: urlToImage,
-  //           title,
-  //           url,
-  //         };
-  //       });
-  //       setHousesData(newHousesData);
-  //     });
-  // }, []);
-  // const { date, image, title, url } = housesData[props];
+
   return (
     <Card>
       <CardActionArea>
@@ -98,23 +60,11 @@ function HousesCard(props) {
           >
             {" "}
             <Typography color="textSecondary" gutterBottom>
-              <Box component="div" className={classes.dateStyle}>
-                <Box component="span" className={classes.titleDate}>
-                  {" "}
-                  {new Date().getDate()}{" "}
-                </Box>
-                <Box component="span" className={classes.titleMonth}>
-                  {new Date().toLocaleString("en", { month: "long" })}{" "}
-                </Box>
-                <Box component="span" className={classes.titleYear}>
-                  {new Date().getFullYear()}
-                </Box>
-              </Box>
+              <div className={classes.dateStyle}>{date}</div>
             </Typography>
           </CardMedia>
           <Typography variant="body2" component="p">
             {title}
-            {/* {console.log(newsIds)} */}
           </Typography>
         </CardContent>
       </CardActionArea>

@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import imageForSiteThird from "../images/imageForSiteThird.jpg";
 import imageForSiteSecond from "../images/imageForSiteSecond.jpg";
 import imageForSlider from "../images/imageForSlider.jpg";
+import DateComponentForGallery from "../Date/DateComponentForGallery";
 
 const useStyles = makeStyles((theme) => ({
   imageFirstStyle: {
@@ -20,32 +21,6 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     width: "400px",
     height: "200px",
-  },
-  dateStyle: {
-    display: "flex",
-    flexDirection: "row",
-    // width: "25%",
-    alignItems: "center",
-    position: "absolute",
-    color: "white",
-    padding: "0 0 0 15px",
-  },
-  titleDate: {
-    fontSize: 50,
-    padding: "0 0 0 15px",
-    justifyContent: "center",
-    display: "flex",
-  },
-  titleMonth: {
-    textTransform: "uppercase",
-    padding: "1px",
-    display: "flex",
-    flexDirection: "column",
-  },
-  titleYear: {
-    padding: "1px",
-    display: "flex",
-    flexDirection: "column",
   },
   componentStyle: {
     display: "flex",
@@ -65,24 +40,15 @@ const GalleryImages = () => {
   return (
     <div className={classes.allComponent}>
       <div className={classes.componentStyle}>
+        {/* first image */}
         <img
           className={classes.imageFirstStyle}
           src={imageForSiteThird}
           alt="Image"
         />
-        <div className={classes.dateStyle}>
-          <span className={classes.titleDate}> {new Date().getDate()} </span>
-          <div>
-            <span className={classes.titleMonth}>
-              {new Date().toLocaleString("en", { month: "long" })}{" "}
-            </span>
-            <span className={classes.titleYear}>
-              {new Date().getFullYear()}
-            </span>
-          </div>
-        </div>
+        <DateComponentForGallery />
       </div>
-      {/* 2 photo */}
+      {/* second photo */}
       <div>
         <div className={classes.componentSecondStyle}>
           <img
@@ -90,17 +56,7 @@ const GalleryImages = () => {
             src={imageForSiteSecond}
             alt="Image"
           />
-          <div className={classes.dateStyle}>
-            <span className={classes.titleDate}> {new Date().getDate()} </span>
-            <div>
-              <span className={classes.titleMonth}>
-                {new Date().toLocaleString("en", { month: "long" })}{" "}
-              </span>
-              <span className={classes.titleYear}>
-                {new Date().getFullYear()}
-              </span>
-            </div>
-          </div>
+          <DateComponentForGallery />
         </div>
         {/* third photo */}
         <div className={classes.componentSecondStyle}>
@@ -109,17 +65,7 @@ const GalleryImages = () => {
             src={imageForSlider}
             alt="Image"
           />
-          <div className={classes.dateStyle}>
-            <span className={classes.titleDate}> {new Date().getDate()} </span>
-            <div>
-              <span className={classes.titleMonth}>
-                {new Date().toLocaleString("en", { month: "long" })}{" "}
-              </span>
-              <span className={classes.titleYear}>
-                {new Date().getFullYear()}
-              </span>
-            </div>
-          </div>
+          <DateComponentForGallery />
         </div>
       </div>
     </div>
