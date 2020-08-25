@@ -4,26 +4,36 @@ import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import Link from "@material-ui/core/Link";
 import { Grid, Paper } from "@material-ui/core";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const useStyles = makeStyles((theme) => ({
   numberStyle: {
     color: "green",
-    padding: "70px",
     display: "flex",
+    "@media(max-width: 600px)": {
+      display: "flex",
+      fontSize: "10px",
+    },
   },
   paperStyle: {
     height: "200px",
     justifyContent: "center",
     display: "flex",
     alignItems: "center",
-    // flexBasis: '100%',
     flexGrow: 1,
+
     // flexWrap: 'wrap'
   },
   logoText: {
     color: "grey",
     display: "flex",
-    padding: "70px",
+    margin: "100px",
+    "@media(max-width: 600px)": {
+      display: "flex",
+      width: "20px",
+      fontSize: "15px",
+      marginRight: "170px",
+    },
   },
   questionStyle: {
     display: "flex",
@@ -34,13 +44,23 @@ const useStyles = makeStyles((theme) => ({
     color: "green",
     boxSizing: "content-box",
     width: "150px",
-    margin: "30%",
     justifyContent: "center",
+    "@media(max-width: 600px)": {
+      display: "flex",
+      width: "60px",
+      fontSize: "15px",
+      marginRight: "15px",
+    },
   },
   questionTextStyle: {
     justifyContent: "center",
     display: "flex",
     alignItems: "center",
+    "@media(max-width: 600px)": {
+      display: "flex",
+      width: "20px",
+      fontSize: "10px",
+    },
   },
   someStyle: {
     display: "flex",
@@ -48,42 +68,69 @@ const useStyles = makeStyles((theme) => ({
     // alignItems: "center",
     justifyContent: "center",
   },
+  mainInfo: {
+    "@media(max-width: 600px)": {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "flex-start",
+      alignItems: "center",
+      width: "300px",
+    },
+  },
+  positionElements: {
+    "@media(max-width: 600px)": {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
+      alignItems: "center",
+      width: "80px",
+      margin: "30px",
+    },
+  },
 }));
+
+// "@media(max-width: 600px)": {
+//   display: "flex",
+//   flexDirection: "row",
+//   justifyContent: "center",
+//   alignItems: "center",
+//   width: "300px",
+// },
 
 const NewMainInfo = () => {
   const classes = useStyles();
   const preventDefault = (event) => event.preventDefault();
+  // const mainInfo = useMediaQuery('(max-width:600px)');
+  const number = `+2 495 134-27-72`;
   return (
-    <Grid container>
-      <Grid item className={classes.someStyle}>
+    <div className={classes.mainInfo}>
+      <div className={classes.someStyle}>
         <Paper className={classes.paperStyle}>
-          <Grid item xs={4}>
-            <Box component="div" className={classes.numberStyle}>
-              <Typography>+2 495 134-27-72</Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={4}>
-            <Box component="div" className={classes.logoText}>
-              <Typography variant="h5">wolshino.com</Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={4}>
-            <Link
-              href="#"
-              onClick={preventDefault}
-              color="inherit"
-              underline="none"
-            >
-              <Box component="div" className={classes.questionStyle}>
+          <div className={classes.positionElements}>
+            <Typography className={classes.numberStyle}>{number}</Typography>
+          </div>
+          <div className={classes.positionElements}>
+            <Typography variant="h5" className={classes.logoText}>
+              wolshino.com
+            </Typography>
+          </div>
+          <Link
+            href="#"
+            onClick={preventDefault}
+            color="inherit"
+            underline="none"
+          >
+            <div className={classes.positionElements}>
+              <div className={classes.questionStyle}>
                 <Typography className={classes.questionTextStyle}>
                   Your Question
                 </Typography>
-              </Box>
-            </Link>
-          </Grid>
+              </div>
+            </div>
+          </Link>
         </Paper>
-      </Grid>
-    </Grid>
+      </div>
+    </div>
   );
 };
 
