@@ -24,6 +24,11 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
   },
+  textStyle: {
+    "@media only screen and (min-width: 320px) and (max-width: 480px)": {
+      display: "none",
+    },
+  },
 });
 
 const HousesTypes = (props) => {
@@ -42,7 +47,11 @@ const HousesTypes = (props) => {
           >
             {title}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography
+            variant="body2"
+            color="textSecondary"
+            className={classes.textStyle}
+          >
             Lizards are a widespread group of squamate reptiles, with over 6,000
             species, ranging across all continents except Antarctica
           </Typography>

@@ -1,10 +1,8 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import Link from "@material-ui/core/Link";
-import { Grid, Paper } from "@material-ui/core";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { Paper } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   numberStyle: {
@@ -21,8 +19,6 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     flexGrow: 1,
-
-    // flexWrap: 'wrap'
   },
   logoText: {
     color: "grey",
@@ -69,38 +65,36 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   mainInfo: {
-    "@media(max-width: 600px)": {
+    "@media only screen and (min-width: 320px) and (max-width: 480px)": {
       display: "flex",
       flexDirection: "row",
       justifyContent: "flex-start",
       alignItems: "center",
-      width: "300px",
+      width: "310px",
     },
   },
   positionElements: {
-    "@media(max-width: 600px)": {
+    "@media only screen and (min-width: 320px) and (max-width: 480px)": {
       display: "flex",
       flexDirection: "row",
       justifyContent: "center",
       alignItems: "center",
-      width: "80px",
+      width: "95px",
+      margin: "20px",
+    },
+    "@media only screen and (min-width: 481px) and (max-width: 768px)": {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
+      alignItems: "center",
+      width: "150px",
       margin: "30px",
     },
   },
 }));
-
-// "@media(max-width: 600px)": {
-//   display: "flex",
-//   flexDirection: "row",
-//   justifyContent: "center",
-//   alignItems: "center",
-//   width: "300px",
-// },
-
 const NewMainInfo = () => {
   const classes = useStyles();
   const preventDefault = (event) => event.preventDefault();
-  // const mainInfo = useMediaQuery('(max-width:600px)');
   const number = `+2 495 134-27-72`;
   return (
     <div className={classes.mainInfo}>

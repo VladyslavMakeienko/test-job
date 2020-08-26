@@ -10,17 +10,65 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     width: "400px",
     height: "400px",
+    "@media only screen and (min-width: 320px) and (max-width: 480px)": {
+      display: "flex",
+      width: "200px",
+      height: "350px",
+    },
+    "@media only screen and (min-width: 481px) and (max-width: 768px)": {
+      display: "flex",
+      width: "300px",
+      height: "400px",
+    },
+    "@media only screen and (min-width: 769px) and (max-width: 827px)": {
+      display: "flex",
+      width: "300px",
+      height: "400px",
+    },
   },
   imageSecondStyle: {
     display: "flex",
     width: "400px",
     height: "200px",
     padding: "0 0 10px 0",
+    "@media only screen and (min-width: 320px) and (max-width: 480px)": {
+      display: "flex",
+      width: "200px",
+      height: "175px",
+      padding: "0 0 10px 0",
+    },
+    "@media only screen and (min-width: 481px) and (max-width: 768px)": {
+      display: "flex",
+      width: "300px",
+      height: "200px",
+      padding: "0 0 10px 0",
+    },
+    "@media only screen and (min-width: 769px) and (max-width: 827px)": {
+      display: "flex",
+      width: "300px",
+      height: "200px",
+      padding: "0 0 10px 0",
+    },
   },
   imageThirdStyle: {
     display: "flex",
     width: "400px",
     height: "200px",
+    "@media only screen and (min-width: 320px) and (max-width: 480px)": {
+      display: "flex",
+      width: "200px",
+      height: "175px",
+    },
+    "@media only screen and (min-width: 481px) and (max-width: 768px)": {
+      display: "flex",
+      width: "300px",
+      height: "200px",
+    },
+    "@media only screen and (min-width: 769px) and (max-width: 827px)": {
+      display: "flex",
+      width: "300px",
+      height: "200px",
+    },
   },
   componentStyle: {
     display: "flex",

@@ -6,11 +6,6 @@ import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { CardMedia } from "@material-ui/core";
-import { galleryFirst } from "../images/galleryFirst.jpg";
-import { gallerySecond } from "../images/gallerySecond.jpg";
-import { galleryThird } from "../images/galleryThird.jpg";
-import Box from "@material-ui/core/Box";
-import axios from "axios";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import { loadNews } from "../../services/NewsAPI";
 
@@ -40,36 +35,39 @@ const useStyles = makeStyles({
   },
 });
 
-function HousesCard(props) {
+const HousesCard = (props) => {
   const classes = useStyles();
   const { title, imgSrc, date } = props;
   const [news, setNews] = useState([]);
-
   useEffect(() => {
     loadNews().then((loadedNews) => setNews(loadedNews));
   }, []);
-
-  return (
-    <Card>
-      <CardActionArea>
-        <CardContent className={classes.root}>
-          <CardMedia
-            image={imgSrc}
-            style={{ height: "150px" }}
-            className={classes.imgStyle}
-          >
-            {" "}
-            <Typography color="textSecondary" gutterBottom>
-              <div className={classes.dateStyle}>{date}</div>
+  const NewsInformation = news.map((item, index) =>
+    index <= 2 ? (
+      <Card key={index}>
+        <CardActionArea>
+          <CardContent className={classes.root}>
+            <CardMedia
+              image={item.urlToImage}
+              style={{ height: "150px" }}
+              className={classes.imgStyle}
+            >
+              {" "}
+              <Typography color="textSecondary" gutterBottom>
+                <div className={classes.dateStyle}>{item.publishedAt}</div>
+              </Typography>
+            </CardMedia>
+            <Typography variant="body2" component="p">
+              {item.title}
             </Typography>
-          </CardMedia>
-          <Typography variant="body2" component="p">
-            {title}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    ) : (
+      ""
+    )
   );
-}
+  return NewsInformation;
+};
 
 export default HousesCard;

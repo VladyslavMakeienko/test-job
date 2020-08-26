@@ -5,7 +5,6 @@ import { galleryFirst } from "../images/galleryFirst.jpg";
 import NewsContainer from "./NewsContainer";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
 import { Paper } from "@material-ui/core";
 import { loadNews } from "../../services/NewsAPI";
 
@@ -47,16 +46,14 @@ const useStyles = makeStyles({
 const Content = () => {
   const classes = useStyles();
   const [news, setNews] = useState([]);
-
   useEffect(() => {
     loadNews().then((loadedNews) => setNews(loadedNews));
   }, []);
-  console.log(news);
-  const NewsInformation = news.map((item, index) => (
+  return (
     <Grid container>
       <Grid item xs={6} sm={12}>
         <Paper className={classes.componentStyle}>
-          <Box component="span" className={classes.positionText}>
+          <span className={classes.positionText}>
             <Typography className={classes.newsText} variant="h3">
               <img
                 src="https://img.icons8.com/ios/452/wavy-line.png"
@@ -68,38 +65,16 @@ const Content = () => {
                 className={classes.imgStyleSecond}
               />
             </Typography>
-          </Box>
+          </span>
           <Grid container spacing={5}>
             <Grid item xs={12} sm={4}>
-              <HousesCard
-                title={item.title}
-                imgSrc={item.urlToImage}
-                date={item.publishedAt}
-                key={index}
-              />
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <HousesCard
-                title={item.title}
-                imgSrc={item.urlToImage}
-                date={item.publishedAt}
-                key={index}
-              />
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <HousesCard
-                title={item.title}
-                imgSrc={item.urlToImage}
-                date={item.publishedAt}
-                key={index}
-              />
+              <HousesCard />
             </Grid>
           </Grid>
         </Paper>
       </Grid>
     </Grid>
-  ));
-  return NewsInformation;
+  );
 };
 
 export default Content;

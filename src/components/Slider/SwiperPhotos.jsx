@@ -14,10 +14,10 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
   {
-    imgPath: `https://lh3.googleusercontent.com/proxy/7Ks5TSiNGPcN-GC1qQEh6n8ttwib06-QPWz8UK0J5f6AlVag4qwvEvQB7kl6TrRDPiUpBDVO0fadc35vvuphlZ2oNUXADg96O7hW_DR--jfuJtFt`,
+    imgPath: `https://i.pinimg.com/originals/1d/07/82/1d07823aa36c5d1f08946d27b83cecae.jpg`,
   },
   {
-    imgPath: `https://lh3.googleusercontent.com/proxy/2iH-xs09UVCAyarIifbH4SIP8JIUfWc6vDcwbTYpwVg7PBvSTPjOTmtpdQYF1UL48UJs5vxxYs-zj2yqSPFPN4d6uFE7BAG4noWUka9uUwQaGHrDCqiAd_-MAY1NyURnxQ`,
+    imgPath: `https://i.pinimg.com/originals/1d/07/82/1d07823aa36c5d1f08946d27b83cecae.jpg`,
   },
   {
     imgPath:
@@ -33,7 +33,6 @@ const tutorialSteps = [
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
     flexGrow: 1,
     alignItems: "center",
   },
