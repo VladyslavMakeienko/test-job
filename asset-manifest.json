@@ -1,30 +1,28 @@
 {
   "files": {
     "main.css": "/test-job/static/css/main.5f361e03.chunk.css",
-    "main.js": "/test-job/static/js/main.c09d89e5.chunk.js",
-    "main.js.map": "/test-job/static/js/main.c09d89e5.chunk.js.map",
+    "main.js": "/test-job/static/js/main.fd1fe92d.chunk.js",
+    "main.js.map": "/test-job/static/js/main.fd1fe92d.chunk.js.map",
     "runtime-main.js": "/test-job/static/js/runtime-main.64410cb9.js",
     "runtime-main.js.map": "/test-job/static/js/runtime-main.64410cb9.js.map",
-    "static/js/2.58c09c24.chunk.js": "/test-job/static/js/2.58c09c24.chunk.js",
-    "static/js/2.58c09c24.chunk.js.map": "/test-job/static/js/2.58c09c24.chunk.js.map",
+    "static/js/2.40ddcbde.chunk.js": "/test-job/static/js/2.40ddcbde.chunk.js",
+    "static/js/2.40ddcbde.chunk.js.map": "/test-job/static/js/2.40ddcbde.chunk.js.map",
     "index.html": "/test-job/index.html",
-    "precache-manifest.bd39567e1c61360230e96f1c09ab7333.js": "/test-job/precache-manifest.bd39567e1c61360230e96f1c09ab7333.js",
+    "precache-manifest.31adc5e549f12756019b6522513a05f0.js": "/test-job/precache-manifest.31adc5e549f12756019b6522513a05f0.js",
     "service-worker.js": "/test-job/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/test-job/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.58c09c24.chunk.js.LICENSE.txt": "/test-job/static/js/2.58c09c24.chunk.js.LICENSE.txt",
+    "static/js/2.40ddcbde.chunk.js.LICENSE.txt": "/test-job/static/js/2.40ddcbde.chunk.js.LICENSE.txt",
     "static/media/ArrowLeft.jpg": "/test-job/static/media/ArrowLeft.4e51e327.jpg",
     "static/media/ArrowRight.jpg": "/test-job/static/media/ArrowRight.b71a1f77.jpg",
     "static/media/galleryFirst.jpg": "/test-job/static/media/galleryFirst.5bd7ac7b.jpg",
-    "static/media/gallerySecond.jpg": "/test-job/static/media/gallerySecond.9260bbd5.jpg",
-    "static/media/galleryThird.jpg": "/test-job/static/media/galleryThird.3bd03da0.jpg",
     "static/media/imageForSiteSecond.jpg": "/test-job/static/media/imageForSiteSecond.e2bc4705.jpg",
     "static/media/imageForSiteThird.jpg": "/test-job/static/media/imageForSiteThird.edcf9ae4.jpg",
     "static/media/imageForSlider.jpg": "/test-job/static/media/imageForSlider.80cbf113.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.64410cb9.js",
-    "static/js/2.58c09c24.chunk.js",
+    "static/js/2.40ddcbde.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.c09d89e5.chunk.js"
+    "static/js/main.fd1fe92d.chunk.js"
   ]
 }
