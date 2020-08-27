@@ -53,17 +53,29 @@ const Header = props => {
 
   const menuItems = [
     {
-      menuTitle: "Home",
-      pageURL: "/"
-    },
-    {
-      menuTitle: "Contact",
-      pageURL: "/contact"
-    },
-    {
       menuTitle: "About",
       pageURL: "/about"
-    }
+    },
+    {
+      menuTitle: "Projects",
+      pageURL: "/projects"
+    },
+    {
+      menuTitle: "Gallery",
+      pageURL: "/gallery"
+    },
+    {
+      menuTitle: "Houses",
+      pageURL: "/houses"
+    },
+    {
+      menuTitle: "General Plan",
+      pageURL: "#"
+    },
+    {
+      menuTitle: "Location",
+      pageURL: "#"
+    },
   ];
 
   return (

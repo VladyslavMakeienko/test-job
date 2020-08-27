@@ -13,6 +13,12 @@ const useStyles = makeStyles({
     flexGrow: 1,
     display: "flex",
     backgroundRepeat: "no-repeat",
+    "@media only screen and (min-width: 320px) and (max-width: 480px)": {
+      width: "400px",
+    },
+    "@media only screen and (min-width: 481px) and (max-width: 768px)": {
+      width: "750px",
+    },
   },
   newsText: {
     textTransform: "uppercase",
@@ -20,6 +26,9 @@ const useStyles = makeStyles({
     justifyContent: "center",
     color: "#fff",
     display: "flex",
+    "@media only screen and (min-width: 320px) and (max-width: 480px)": {
+      fontSize: "25px",
+    },
   },
   positionText: {
     justifyContent: "center",
@@ -35,6 +44,21 @@ const useStyles = makeStyles({
     margin: "70px",
     alignItems: "center",
     flexDirection: "column",
+    "@media only screen and (min-width: 481px) and (max-width: 768px)": {
+      margin: "70px 70px 70px 100px",
+    },
+    "@media only screen and (min-width: 769px) and (max-width: 827px)": {
+      margin: "70px 70px 70px 100px",
+    },
+    "@media only screen and (min-width: 828px) and (max-width: 1024px)": {
+      margin: "70px 70px 70px 130px",
+    },
+    "@media only screen and (min-width: 1025px) and (max-width: 1440px)": {
+      margin: "70px 70px 70px 170px",
+    },
+    "@media only screen and (min-width: 1441px) and (max-width: 2560px)": {
+      margin: "70px 70px 70px 220px",
+    },
   },
   textStyle: {
     justifyContent: "center",
@@ -56,6 +80,10 @@ const useStyles = makeStyles({
     flexDirection: "column",
     justifyContent: "center",
     margin: "0  35% 0 35%",
+    alignItems: "center",
+    "@media only screen and (min-width: 320px) and (max-width: 480px)": {
+      margin: "0 20% 0 20%",
+    },
   },
 });
 

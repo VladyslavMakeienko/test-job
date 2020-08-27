@@ -36,15 +36,35 @@ const useStyles = makeStyles({
   },
   containerStyle: {
     padding: "30px",
+    "@media only screen and (min-width: 481px) and (max-width: 768px)": {
+      padding: "20px",
+    },
+    "@media only screen and (min-width: 769px) and (max-width: 827px)": {
+      padding: "10px",
+    },
   },
   itemStyle: {
-    width: "300px",
+    width: "250px",
+    "@media only screen and (min-width: 320px) and (max-width: 480px)": {
+      display: "flex",
+      width: "300px",
+      height: "150px",
+    },
+    "@media only screen and (min-width: 481px) and (max-width: 768px)": {
+      display: "flex",
+      width: "600px",
+      height: "150px",
+    },
+    "@media only screen and (min-width: 769px) and (max-width: 827px)": {
+      display: "flex",
+      width: "240px",
+      height: "400px",
+    },
   },
 });
 
-const HousesCard = (props) => {
+const NewsCards = (props) => {
   const classes = useStyles();
-  const { title, imgSrc, date } = props;
   const [news, setNews] = useState([]);
   useEffect(() => {
     loadNews().then((loadedNews) => setNews(loadedNews));
@@ -69,9 +89,7 @@ const HousesCard = (props) => {
                       </div>
                     </Typography>
                   </CardMedia>
-                  <Typography variant="body2" component="p">
-                    {item.title}
-                  </Typography>
+                  <Typography variant="body2">{item.title}</Typography>
                 </CardContent>
               </CardActionArea>
             </Card>
@@ -85,4 +103,4 @@ const HousesCard = (props) => {
   return NewsInformation;
 };
 
-export default HousesCard;
+export default NewsCards;
