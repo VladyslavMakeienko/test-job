@@ -2,7 +2,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Link from "@material-ui/core/Link";
 import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,7 +18,7 @@ const About = () => {
   return (
     <Typography className={classes.root}>
       <Link href="#" onClick={preventDefault} color="inherit" underline="none">
-        <Box component="div">About</Box>
+        <div>About</div>
       </Link>
     </Typography>
   );

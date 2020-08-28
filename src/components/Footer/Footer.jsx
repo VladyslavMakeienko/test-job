@@ -1,26 +1,9 @@
 import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import Link from "@material-ui/core/Link";
-import Box from "@material-ui/core/Box";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import { IconButton } from "@material-ui/core";
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary">
-      {"© "}
-      <Link color="inherit" href="#">
-        wolshino
-      </Link>{" "}
-      {new Date().getFullYear()}
-    </Typography>
-  );
-}
+import Copyright from "./Copyright";
+import ShareWithYourFriends from "./ShareWithYourFriends";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3, 2),
     flexGrow: 1,
     marginTop: "auto",
-    // alignItems: 'flex-start',
     justifyContent: "space-between",
     backgroundColor:
       theme.palette.type === "light"
@@ -44,36 +26,35 @@ const useStyles = makeStyles((theme) => ({
   containerStyle: {
     justifyContent: "space-around",
     display: "flex",
+    alignItems: "center",
+    "@media only screen and (min-width: 320px) and (max-width: 480px)": {
+      justifyContent: "space-around",
+      display: "flex",
+      width: "300px",
+    },
+    "@media only screen and (min-width: 481px) and (max-width: 768px)": {
+      justifyContent: "center",
+      display: "flex",
+      width: "500px",
+      alignItems: "center",
+    },
   },
 }));
 
-export default function StickyFooter() {
+const StickyFooter = () => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <CssBaseline />
-
       <footer className={classes.footer}>
         <Container className={classes.containerStyle}>
-          <Box component="div">
-            <Typography variant="body1">
-              Share with your friends
-              <IconButton>
-                <InstagramIcon />
-              </IconButton>
-              <IconButton>
-                <TwitterIcon />
-              </IconButton>
-              <IconButton>
-                <FacebookIcon />
-              </IconButton>
-            </Typography>
-          </Box>
-
+          <ShareWithYourFriends />
           <Copyright />
         </Container>
       </footer>
     </div>
   );
-}
+};
+
+export default StickyFooter;

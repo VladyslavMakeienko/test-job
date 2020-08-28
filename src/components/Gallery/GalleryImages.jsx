@@ -92,7 +92,7 @@ const GalleryImages = () => {
         <img
           className={classes.imageFirstStyle}
           src={imageForSiteThird}
-          alt="Image"
+          alt="Gallery"
         />
         <DateComponentForGallery />
       </div>
@@ -102,7 +102,7 @@ const GalleryImages = () => {
           <img
             className={classes.imageSecondStyle}
             src={imageForSiteSecond}
-            alt="Image"
+            alt="Gallery"
           />
           <DateComponentForGallery />
         </div>
@@ -111,7 +111,7 @@ const GalleryImages = () => {
           <img
             className={classes.imageThirdStyle}
             src={imageForSlider}
-            alt="Image"
+            alt="Gallery"
           />
           <DateComponentForGallery />
         </div>
