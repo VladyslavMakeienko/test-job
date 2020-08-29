@@ -1,21 +1,22 @@
 {
   "files": {
     "main.css": "/test-job/static/css/main.5f361e03.chunk.css",
-    "main.js": "/test-job/static/js/main.c48e2754.chunk.js",
-    "main.js.map": "/test-job/static/js/main.c48e2754.chunk.js.map",
+    "main.js": "/test-job/static/js/main.a22ede40.chunk.js",
+    "main.js.map": "/test-job/static/js/main.a22ede40.chunk.js.map",
     "runtime-main.js": "/test-job/static/js/runtime-main.64410cb9.js",
     "runtime-main.js.map": "/test-job/static/js/runtime-main.64410cb9.js.map",
     "static/css/2.47311176.chunk.css": "/test-job/static/css/2.47311176.chunk.css",
-    "static/js/2.bb5cd30d.chunk.js": "/test-job/static/js/2.bb5cd30d.chunk.js",
-    "static/js/2.bb5cd30d.chunk.js.map": "/test-job/static/js/2.bb5cd30d.chunk.js.map",
+    "static/js/2.8453f92a.chunk.js": "/test-job/static/js/2.8453f92a.chunk.js",
+    "static/js/2.8453f92a.chunk.js.map": "/test-job/static/js/2.8453f92a.chunk.js.map",
     "index.html": "/test-job/index.html",
-    "precache-manifest.9c320845ef914d02caaecb4f45de78ad.js": "/test-job/precache-manifest.9c320845ef914d02caaecb4f45de78ad.js",
+    "precache-manifest.7585e6cfacb5dc4be0735d40a6dfed77.js": "/test-job/precache-manifest.7585e6cfacb5dc4be0735d40a6dfed77.js",
     "service-worker.js": "/test-job/service-worker.js",
     "static/css/2.47311176.chunk.css.map": "/test-job/static/css/2.47311176.chunk.css.map",
     "static/css/main.5f361e03.chunk.css.map": "/test-job/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.bb5cd30d.chunk.js.LICENSE.txt": "/test-job/static/js/2.bb5cd30d.chunk.js.LICENSE.txt",
+    "static/js/2.8453f92a.chunk.js.LICENSE.txt": "/test-job/static/js/2.8453f92a.chunk.js.LICENSE.txt",
     "static/media/ArrowLeft.jpg": "/test-job/static/media/ArrowLeft.4e51e327.jpg",
     "static/media/ArrowRight.jpg": "/test-job/static/media/ArrowRight.b71a1f77.jpg",
+    "static/media/HOUSE.png": "/test-job/static/media/HOUSE.e0d76d36.png",
     "static/media/imageForSiteSecond.jpg": "/test-job/static/media/imageForSiteSecond.e2bc4705.jpg",
     "static/media/imageForSiteThird.jpg": "/test-job/static/media/imageForSiteThird.edcf9ae4.jpg",
     "static/media/imageForSlider.jpg": "/test-job/static/media/imageForSlider.80cbf113.jpg",
@@ -24,8 +25,8 @@
   "entrypoints": [
     "static/js/runtime-main.64410cb9.js",
     "static/css/2.47311176.chunk.css",
-    "static/js/2.bb5cd30d.chunk.js",
+    "static/js/2.8453f92a.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.c48e2754.chunk.js"
+    "static/js/main.a22ede40.chunk.js"
   ]
 }
