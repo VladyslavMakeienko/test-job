@@ -19,7 +19,8 @@ const useStyles = makeStyles({
       alignItems: "center",
       flexDirection: "column",
       backgroundColor: "#e9e9e9",
-      width: "400px",
+      minWidth: "320px",
+      maxWidth: "480px",
     },
     "@media only screen and (min-width: 481px) and (max-width: 768px)": {
       display: "flex",
@@ -27,7 +28,8 @@ const useStyles = makeStyles({
       alignItems: "center",
       flexDirection: "column",
       backgroundColor: "#e9e9e9",
-      width: "750px",
+      minWidth: "481px",
+      maxWidth: "768px",
     },
   },
   cardStyle: {

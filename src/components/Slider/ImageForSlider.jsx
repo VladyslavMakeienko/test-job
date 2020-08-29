@@ -1,24 +1,65 @@
 import React from "react";
-import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
-import imageForSlider from "../images/imageForSlider.jpg";
+import Link from "@material-ui/core/Link";
+import House from "../images/HOUSE.png";
 
 const useStyles = makeStyles(() => ({
-  imageBackgroundStyle: {
-    backgroundImage: `url(${imageForSlider})`,
+  imageHouseStyle: {
+    display: "flex",
+    height: "300px",
+    position: "relative",
+  },
+  textProject: {
+    display: "flex",
+    width: "100%",
+    position: "absolute",
+    left: "150px",
+    bottom: "150px",
+    textTransform: "uppercase",
+    color: "#fff",
+    fontSize: "30px",
+  },
+  linkStyle: {
+    color: "white",
+  },
+  linkText: {
+    border: "1px solid white",
+    borderRadius: "80px",
+    width: "140px",
+    textTransform: "uppercase",
+    padding: "7px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    margin: "0  35% 0 35%",
+    alignItems: "center",
+    position: "absolute",
+    bottom: "80px",
+    "@media only screen and (min-width: 320px) and (max-width: 480px)": {
+      margin: "0 20% 0 20%",
+    },
   },
 }));
 
 const ImageForSlider = () => {
   const classes = useStyles();
-  const image = imageForSlider;
+  const preventDefault = (event) => event.preventDefault();
+  const textProject = `Veil Project`;
+  const textLink = `Join`;
   return (
     <div>
-      <img
-        src={`https://www.remontbp.com/wp-content/uploads/2017/12/%D0%B7%D0%B0%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9-%D0%B4%D0%BE%D0%BC-%D0%B8%D0%B7-%D0%B1%D1%80%D1%83%D1%81%D0%B0.jpg`}
-        alt="Image"
-      />
+      <div>
+        <img src={House} alt="House" className={classes.imageHouseStyle} />
+        <div className={classes.textProject}>{textProject}</div>
+        <Link
+          href="#"
+          onClick={preventDefault}
+          className={classes.linkStyle}
+          underline="none"
+        >
+          <div className={classes.linkText}>{textLink}</div>
+        </Link>
+      </div>
     </div>
   );
 };

@@ -14,10 +14,12 @@ const useStyles = makeStyles({
     display: "flex",
     backgroundRepeat: "no-repeat",
     "@media only screen and (min-width: 320px) and (max-width: 480px)": {
-      width: "400px",
+      minWidth: "320px",
+      maxWidth: "480px",
     },
     "@media only screen and (min-width: 481px) and (max-width: 768px)": {
-      width: "750px",
+      minWidth: "481px",
+      maxWidth: "768px",
     },
   },
   positionText: {

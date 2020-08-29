@@ -26,7 +26,7 @@ const HousesTypesContainer = () => {
   const classes = useStyles();
   return (
     <Grid container>
-      <Grid item xs={6} sm={12}>
+      <Grid item xs={12}>
         <Paper className={classes.componentStyle}>
           <HousesTitle />
           <Grid container spacing={3} className={classes.cardPosition}>

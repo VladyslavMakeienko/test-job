@@ -12,6 +12,7 @@ import HousesTypesContainer from "./components/Houses/HousesTypesContainer";
 import GalleryContainer from "./components/Gallery/GalleryContainer";
 import SliderContainer from "./components/Slider/SliderContainer";
 import MainInfoContainer from "./components/MainInfo/MainInfoContainer";
+import ImageForSlider from "./components/Slider/ImageForSlider";
 
 const useStyles = makeStyles({
   allStyle: {
@@ -35,8 +36,9 @@ function App() {
           <Route path="/houses" render={() => <HousesTypesContainer />} />
         </Switch>
         <MainInfoContainer />
+        {/* <ImageForSlider /> */}
         {/* <SwiperPhotos /> */}
-        {/* <SliderContainer /> */}
+        <SliderContainer />
         <HousesTypesContainer />
         <AboutContainer />
         <NewsContainer />

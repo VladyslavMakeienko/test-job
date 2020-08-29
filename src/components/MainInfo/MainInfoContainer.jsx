@@ -25,7 +25,8 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: "row",
       justifyContent: "flex-start",
       alignItems: "center",
-      width: "310px",
+      minWidth: "320px",
+      maxWidth: "480px",
     },
   },
 }));
