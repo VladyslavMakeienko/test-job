@@ -5,6 +5,8 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import { IconButton } from "@material-ui/core";
 
+/* Share With Your Friends and Social Network Icons */
+
 const ShareWithYourFriends = () => {
   return (
     <div>

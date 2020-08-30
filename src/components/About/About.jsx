@@ -8,9 +8,17 @@ const useStyles = makeStyles((theme) => ({
     "& > * + *": {
       marginLeft: theme.spacing(2),
       marginRight: theme.spacing(3),
+      mozMarginLeft: theme.spacing(2),
+      mozMarginRight: theme.spacing(3),
+      webkitMarginLeft: theme.spacing(2),
+      webkitMarginRight: theme.spacing(3),
+      msMarginLeft: theme.spacing(2),
+      msMarginRight: theme.spacing(3),
     },
   },
 }));
+
+/* About в шапке */
 
 const About = () => {
   const classes = useStyles();

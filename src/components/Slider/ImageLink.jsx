@@ -2,12 +2,12 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Link from "@material-ui/core/Link";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(() => ({
   linkStyle: {
-    color: "#fff",
-    webkitColor: "#fff",
-    mozColor: "#fff",
-    msColor: "#fff",
+    color: "white",
+    webkitColor: "white",
+    mozColor: "white",
+    msColor: "white",
   },
   linkText: {
     border: "1px solid white",
@@ -20,6 +20,8 @@ const useStyles = makeStyles({
     justifyContent: "center",
     margin: "0  35% 0 35%",
     alignItems: "center",
+    position: "absolute",
+    bottom: "80px",
     webkitBorder: "1px solid white",
     webkitBorderRadius: "80px",
     webkitWidth: "140px",
@@ -30,6 +32,8 @@ const useStyles = makeStyles({
     webkitJustifyContent: "center",
     webkitMargin: "0  35% 0 35%",
     webkitAlignItems: "center",
+    webkitPosition: "absolute",
+    webkitBottom: "80px",
     mozBorder: "1px solid white",
     mozBorderRadius: "80px",
     mozWidth: "140px",
@@ -40,6 +44,8 @@ const useStyles = makeStyles({
     mozJustifyContent: "center",
     mozMargin: "0  35% 0 35%",
     mozAlignItems: "center",
+    mozPosition: "absolute",
+    mozBottom: "80px",
     msBorder: "1px solid white",
     msBorderRadius: "80px",
     msWidth: "140px",
@@ -50,6 +56,8 @@ const useStyles = makeStyles({
     msJustifyContent: "center",
     msMargin: "0  35% 0 35%",
     msAlignItems: "center",
+    msPosition: "absolute",
+    msBottom: "80px",
     "@media only screen and (min-width: 320px) and (max-width: 480px)": {
       margin: "0 20% 0 20%",
       webkitMargin: "0 20% 0 20%",
@@ -57,14 +65,12 @@ const useStyles = makeStyles({
       msMargin: "0 20% 0 20%",
     },
   },
-});
+}));
 
-/* About кнопка All Information */
-
-const AboutAllInformationLink = () => {
+const ImageLink = () => {
   const classes = useStyles();
   const preventDefault = (event) => event.preventDefault();
-  const textLink = `All Information`;
+  const textLink = `Join`;
   return (
     <Link
       href="#"
@@ -77,4 +83,4 @@ const AboutAllInformationLink = () => {
   );
 };
 
-export default AboutAllInformationLink;
+export default ImageLink;

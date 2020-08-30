@@ -7,17 +7,21 @@ import NewsContainer from "./components/News/NewsContainer";
 import AboutContainer from "./components/About/AboutContainer";
 import { Route, Switch } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
-import SwiperPhotos from "./components/Slider/SwiperPhotos";
 import HousesTypesContainer from "./components/Houses/HousesTypesContainer";
 import GalleryContainer from "./components/Gallery/GalleryContainer";
 import SliderContainer from "./components/Slider/SliderContainer";
 import MainInfoContainer from "./components/MainInfo/MainInfoContainer";
-import ImageForSlider from "./components/Slider/ImageForSlider";
 
 const useStyles = makeStyles({
   allStyle: {
     display: "flex",
     flexDirection: "column",
+    webkitDisplay: "flex",
+    webkitFlexDirection: "column",
+    mozDisplay: "flex",
+    mozFlexDirection: "column",
+    msDisplay: "flex",
+    msFlexDirection: "column",
   },
 });
 
@@ -31,13 +35,11 @@ function App() {
       <Grid item>
         <Switch>
           <Route path="/about" render={() => <AboutContainer />} />
-          <Route path="/projects" render={() => <SwiperPhotos />} />
+          <Route path="/projects" render={() => <SliderContainer />} />
           <Route path="/gallery" render={() => <GalleryContainer />} />
           <Route path="/houses" render={() => <HousesTypesContainer />} />
         </Switch>
         <MainInfoContainer />
-        {/* <ImageForSlider /> */}
-        {/* <SwiperPhotos /> */}
         <SliderContainer />
         <HousesTypesContainer />
         <AboutContainer />

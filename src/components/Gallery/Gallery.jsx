@@ -7,9 +7,14 @@ const useStyles = makeStyles((theme) => ({
   root: {
     "& > * + *": {
       marginLeft: theme.spacing(2),
+      webkitMarginLeft: theme.spacing(2),
+      mozMarginLeft: theme.spacing(2),
+      msMarginLeft: theme.spacing(2),
     },
   },
 }));
+
+/* Gallery шапка */
 
 const Gallery = () => {
   const classes = useStyles();
