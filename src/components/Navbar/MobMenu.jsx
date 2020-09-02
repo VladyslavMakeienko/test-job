@@ -9,9 +9,6 @@ import Menu from "@material-ui/core/Menu";
 const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
-    webkitMarginRight: theme.spacing(2),
-    mozMarginRight: theme.spacing(2),
-    msMarginRight: theme.spacing(2),
   },
 }));
 
@@ -88,7 +85,7 @@ const MobMenu = (props) => {
         {menuItems.map((menuItem) => {
           const { menuTitle, pageURL } = menuItem;
           return (
-            <MenuItem onClick={() => handleMenuClick(pageURL)}>
+            <MenuItem onClick={() => handleMenuClick(pageURL)} key={menuTitle}>
               {menuTitle}
             </MenuItem>
           );

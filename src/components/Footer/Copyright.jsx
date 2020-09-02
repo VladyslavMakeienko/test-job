@@ -5,11 +5,12 @@ import Link from "@material-ui/core/Link";
 /* Copyright Wolshino */
 
 const Copyright = () => {
+  const textCopyright = `wolshino`;
   return (
     <Typography variant="body2" color="textSecondary">
       {"© "}
       <Link color="inherit" href="#">
-        wolshino
+        {textCopyright}
       </Link>{" "}
       {new Date().getFullYear()}
     </Typography>

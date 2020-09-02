@@ -7,9 +7,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     "& > * + *": {
       marginLeft: theme.spacing(2),
-      webkitMarginLeft: theme.spacing(2),
-      mozMarginLeft: theme.spacing(2),
-      msMarginLeft: theme.spacing(2),
     },
   },
 }));
@@ -19,10 +16,11 @@ const useStyles = makeStyles((theme) => ({
 const Gallery = () => {
   const classes = useStyles();
   const preventDefault = (event) => event.preventDefault();
+  const textGallery = `Gallery`;
   return (
     <Typography className={classes.root}>
       <Link href="#" onClick={preventDefault} color="inherit" underline="none">
-        <div>Gallery</div>
+        {textGallery}
       </Link>
     </Typography>
   );

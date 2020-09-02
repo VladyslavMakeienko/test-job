@@ -8,10 +8,11 @@ import { IconButton } from "@material-ui/core";
 /* Share With Your Friends and Social Network Icons */
 
 const ShareWithYourFriends = () => {
+  const text = `Share with your friends`;
   return (
     <div>
       <Typography variant="body1">
-        Share with your friends
+        {text}
         <IconButton>
           <InstagramIcon />
         </IconButton>

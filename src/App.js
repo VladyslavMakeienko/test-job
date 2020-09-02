@@ -16,12 +16,6 @@ const useStyles = makeStyles({
   allStyle: {
     display: "flex",
     flexDirection: "column",
-    webkitDisplay: "flex",
-    webkitFlexDirection: "column",
-    mozDisplay: "flex",
-    mozFlexDirection: "column",
-    msDisplay: "flex",
-    msFlexDirection: "column",
   },
 });
 

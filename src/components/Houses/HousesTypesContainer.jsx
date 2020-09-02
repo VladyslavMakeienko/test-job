@@ -12,21 +12,6 @@ const useStyles = makeStyles({
     flexGrow: 1,
     height: "400px",
     justifyContent: "center",
-    webkitDisplay: "flex",
-    webkitFlexDirection: "row",
-    webkitFlexGrow: 1,
-    webkitHeight: "400px",
-    webkitJustifyContent: "center",
-    mozDisplay: "flex",
-    mozFlexDirection: "row",
-    mozFlexGrow: 1,
-    mozHeight: "400px",
-    mozJustifyContent: "center",
-    msDisplay: "flex",
-    msFlexDirection: "row",
-    msFlexGrow: 1,
-    msHeight: "400px",
-    msJustifyContent: "center",
   },
   cardPosition: {
     display: "flex",
@@ -34,21 +19,6 @@ const useStyles = makeStyles({
     justifyContent: "center",
     flexDirection: "row",
     flexGrow: 1,
-    webkitDisplay: "flex",
-    webkitAlignItems: "center",
-    webkitJustifyContent: "center",
-    webkitFlexDirection: "row",
-    webkitFlexGrow: 1,
-    mozDisplay: "flex",
-    mozAlignItems: "center",
-    mozJustifyContent: "center",
-    mozFlexDirection: "row",
-    mozFlexGrow: 1,
-    msDisplay: "flex",
-    msAlignItems: "center",
-    msJustifyContent: "center",
-    msFlexDirection: "row",
-    msFlexGrow: 1,
   },
 });
 
@@ -61,7 +31,7 @@ const HousesTypesContainer = () => {
       <Grid item xs={12}>
         <Paper className={classes.componentStyle}>
           <HousesTitle />
-          <Grid container spacing={3} className={classes.cardPosition}>
+          <Grid container spacing={1} className={classes.cardPosition}>
             <Grid item xs={6} sm={3}>
               <HousesTypes
                 title={` Aspen `}

@@ -8,12 +8,6 @@ const useStyles = makeStyles((theme) => ({
     "& > * + *": {
       marginLeft: theme.spacing(2),
       marginRight: theme.spacing(3),
-      mozMarginLeft: theme.spacing(2),
-      mozMarginRight: theme.spacing(3),
-      webkitMarginLeft: theme.spacing(2),
-      webkitMarginRight: theme.spacing(3),
-      msMarginLeft: theme.spacing(2),
-      msMarginRight: theme.spacing(3),
     },
   },
 }));
@@ -23,10 +17,11 @@ const useStyles = makeStyles((theme) => ({
 const About = () => {
   const classes = useStyles();
   const preventDefault = (event) => event.preventDefault();
+  const textAbout = `About`;
   return (
     <Typography className={classes.root}>
       <Link href="#" onClick={preventDefault} color="inherit" underline="none">
-        <div>About</div>
+        {textAbout}
       </Link>
     </Typography>
   );

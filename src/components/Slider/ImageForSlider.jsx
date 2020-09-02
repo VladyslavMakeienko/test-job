@@ -9,15 +9,6 @@ const useStyles = makeStyles(() => ({
     display: "flex",
     height: "300px",
     position: "relative",
-    webkitDisplay: "flex",
-    webkitHeight: "300px",
-    webkitPosition: "relative",
-    mozDisplay: "flex",
-    mozHeight: "300px",
-    mozPosition: "relative",
-    msDisplay: "flex",
-    msHeight: "300px",
-    msPosition: "relative",
   },
 }));
 

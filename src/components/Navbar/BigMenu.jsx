@@ -1,7 +1,6 @@
 import React from "react";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import { withRouter } from "react-router-dom";
-import Typography from "@material-ui/core/Typography";
 import About from "../About/About";
 import Projects from "../Projects/Projects";
 import Gallery from "../Gallery/Gallery";
@@ -16,42 +15,15 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     margin: "10px",
     alignItems: "center",
-    webkitColor: "grey",
-    webkitTextTransform: "uppercase",
-    webkitDisplay: "flex",
-    webkitMargin: "10px",
-    webkitAlignItems: "center",
-    mozColor: "grey",
-    mozTextTransform: "uppercase",
-    mozDisplay: "flex",
-    mozMargin: "10px",
-    mozAlignItems: "center",
-    msColor: "grey",
-    msTextTransform: "uppercase",
-    msDisplay: "flex",
-    msMargin: "10px",
-    msAlignItems: "center",
 
     [theme.breakpoints.down("xs")]: {
       flexGrow: 1,
-      webkitFlexGrow: 1,
-      mozFlexGrow: 1,
-      msFlexGrow: 1,
     },
   },
   headerOptions: {
     display: "flex",
     justifyContent: "center",
     flexDirection: "row",
-    webkitDisplay: "flex",
-    webkitJustifyContent: "center",
-    webkitFlexDirection: "row",
-    mozDisplay: "flex",
-    mozJustifyContent: "center",
-    mozFlexDirection: "row",
-    msDisplay: "flex",
-    msJustifyContent: "center",
-    msFlexDirection: "row",
   },
 }));
 
@@ -60,60 +32,41 @@ const useStyles = makeStyles((theme) => ({
 const BigMenu = (props) => {
   const { history } = props;
   const classes = useStyles();
-  const theme = useTheme();
   const handleButtonClick = (pageURL) => {
     history.push(pageURL);
   };
 
   return (
     <div className={classes.headerOptions}>
-      <div>
-        <Typography
-          className={classes.textStyle}
-          onClick={() => handleButtonClick("/about")}
-        >
-          <About />
-        </Typography>
+      <div
+        className={classes.textStyle}
+        onClick={() => handleButtonClick("/about")}
+      >
+        <About />
       </div>
-      <div>
-        <Typography
-          onClick={() => handleButtonClick("/projects")}
-          className={classes.textStyle}
-        >
-          <Projects />
-        </Typography>
+      <div
+        onClick={() => handleButtonClick("/projects")}
+        className={classes.textStyle}
+      >
+        <Projects />
       </div>
-      <div>
-        <Typography
-          className={classes.textStyle}
-          onClick={() => handleButtonClick("/gallery")}
-        >
-          <Gallery />
-        </Typography>
+      <div
+        className={classes.textStyle}
+        onClick={() => handleButtonClick("/gallery")}
+      >
+        <Gallery />
       </div>
-      <div>
-        <Typography
-          className={classes.textStyle}
-          onClick={() => handleButtonClick("/houses")}
-        >
-          <Houses />
-        </Typography>
+      <div
+        className={classes.textStyle}
+        onClick={() => handleButtonClick("/houses")}
+      >
+        <Houses />
       </div>
-      <div>
-        <Typography
-          className={classes.textStyle}
-          onClick={() => handleButtonClick("#")}
-        >
-          <GeneralPlan />
-        </Typography>
+      <div className={classes.textStyle} onClick={() => handleButtonClick("#")}>
+        <GeneralPlan />
       </div>
-      <div>
-        <Typography
-          className={classes.textStyle}
-          onClick={() => handleButtonClick("#")}
-        >
-          <Location />
-        </Typography>
+      <div className={classes.textStyle} onClick={() => handleButtonClick("#")}>
+        <Location />
       </div>
     </div>
   );

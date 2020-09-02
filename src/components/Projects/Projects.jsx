@@ -7,9 +7,6 @@ const useStyles = makeStyles((theme) => ({
   root: {
     "& > * + *": {
       marginLeft: theme.spacing(2),
-      webkitMarginLeft: theme.spacing(2),
-      mozMarginLeft: theme.spacing(2),
-      msMarginLeft: theme.spacing(2),
     },
   },
 }));
@@ -18,11 +15,11 @@ const useStyles = makeStyles((theme) => ({
 
 const Projects = () => {
   const classes = useStyles();
-  const preventDefault = (event) => event.preventDefault();
+  const textProjects = `Projects`;
   return (
     <Typography className={classes.root}>
       <Link href="#" color="inherit" underline="none">
-        <div>Projects</div>
+        {textProjects}
       </Link>
     </Typography>
   );
