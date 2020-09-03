@@ -27,12 +27,12 @@ function App() {
         <Header />
       </Grid>
       <Grid item>
-        <Switch>
+        {/* <Switch>
           <Route path="/about" render={() => <AboutContainer />} />
           <Route path="/projects" render={() => <SliderContainer />} />
           <Route path="/gallery" render={() => <GalleryContainer />} />
           <Route path="/houses" render={() => <HousesTypesContainer />} />
-        </Switch>
+        </Switch> */}
         <MainInfoContainer />
         <SliderContainer />
         <HousesTypesContainer />
